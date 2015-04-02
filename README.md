@@ -25,13 +25,10 @@ Currently no way to leverage usual piping (like `ls | grep ...`) or change direc
 ## Examples ##
 `ls | filter (> "p")` - list only files starting with p
 
-`ls | filter (grep "node") - no need to describe
+`ls | filter (grep "node")` - no need to describe
 
 `ls | (filter (> "p")) >> join ";"` - then join array with ;
 
 `ls -l | (map (words >> (at 4) >> Number)) >> mean` - on my machine it takes a size column (4) from list, converts it to number and calculates average
 
-
-Examples:
-
-`ls | 
+For available functions reference, see preludels.com 
